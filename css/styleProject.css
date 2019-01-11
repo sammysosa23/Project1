@@ -1,0 +1,40 @@
+/* * {
+    box-sizing: border-box;
+    height: 100%;
+} */
+html, body {
+    height: 95%;
+}
+#cover {
+    background: #222 url("../images/jupiter.jpg") center center no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#contentContainer {
+    height: 80%;
+    width: 80%;
+    align-items: center;
+
+}
+#trendingButtons.absolute {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 100%;
+}
+#submitButtonForm {
+    text-align: center;
+    align-items: center;
+}
+#cover-caption {
+    width: 100%;
+}
+h1, h6 {
+    align-content: center;
+    text-align: center;
+} 
