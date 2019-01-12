@@ -23,12 +23,14 @@
   <form id="search-inputs-form">
     <label for="keywords">Keywords</label>
     <input type="text" id="keywords">
-
-    <label for="lat">Lat</label>
+    
+    <label for="address">Address</label>
+    <input type="text" id="address">
+    <!-- <label for="lat">Lat</label>
     <input type="text" id="lat">
 
     <label for="long">Long</label>
-    <input type="text" id="long">
+    <input type="text" id="long"> -->
 
     <label for="radius">Radius</label>
     <input type="text" id="radius">
@@ -37,11 +39,10 @@
     <input id="search" type="submit" value="Search">
   </form>
 
-  <button id="execute-request-button">Authorize</button>
-
   <script src="assets/js/videoSearch.js"></script>
-  <script src="assets/js/videoLocation.js"></script>
-
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgDiGe1sPYYqpbGQCbUR5W9gUVrv7L1Qk&callback=initMap">
+  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </script>
 </body>
