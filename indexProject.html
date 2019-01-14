@@ -8,7 +8,12 @@
 
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-   
+   <!-- FIREBASE -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script> -->
+    <link src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></link>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+
+
     <!-- CSS  -->
     <link rel="stylesheet" type="text/css" href="css/styleProject.css">
 
@@ -16,7 +21,7 @@
 <body>
     <!-- NAVIGATION BAR -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark navbar-full" id="nav-main">
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href=""><img class="logoImage" src="assets/images/ketchup2.png" alt="ketchup splatter"></a>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">####<span class="sr-only">(current)</span></a>
@@ -25,15 +30,15 @@
                     <a class="nav-link" href="#">####</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">####</a>
+                    <a class="nav-link" href="#">WHO WE ARE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">####</a>
+                    <a class="nav-link" href="#">CONTACT US</a>
                 </li>
             </ul>
                 <form class="form-inline">
                     <input class="form-control mr-1" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-dark" type="submit"><img class="searchImage" src="assets/images/searchIcon.png" alt="search icon"></button>
                 </form>
     </nav>
     <!-- BODY CONTAINER -->
@@ -43,6 +48,8 @@
                     <div class="col-sm-10 offset-sm-1">
                         <h1 class="display-3">Welcome to our "Ketchup"</h1>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+                        <div id="emptyGoogleDiv"></div> <!-- EMPTY DIV TO BE POPULATED BY THE GOOGLE API-->
 
                         <div id="contentContainer">
                         </div>
@@ -60,6 +67,17 @@
             </div>
     </section>
 
+    <!-- LIGHTBOX CONTAINING NAME - EMAIL FORM -->
+    <div class="lightbox">
+        <h2>Sign up</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum neque omnis saepe ad, a cum, ipsa dolore fugiat?</p>
+        <form action=""">
+            <input type="name" class="name" placeholder="Name">
+            <input type="email" class="email" placeholder="Email"><br>
+            <input type="submit" value="Submit" class="submitButton"><br>
+            <!-- <img class="ketchupSticker" src="assets/images/giphy.gif" alt="ketchup sticker"> --> 
+        </form>
+    </div>
     <!-- INPUT FORM -->
     <div id="submitButtonForm">
         <form action="" class="form-inline justify-content-center">
@@ -74,14 +92,11 @@
             <button type="submit" class="btn btn-success btn-lg mr-1">submit</button>
         </form>
     </div>
-
-    <!-- JQUERY FILE  -->
-    <script type="text/javascript" src="appProject.js"></script>
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- JQUERY FILE  -->
+    <script type="text/javascript" src="appProject.js"></script>
 </body>
 </html>
