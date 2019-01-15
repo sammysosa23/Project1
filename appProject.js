@@ -15,7 +15,7 @@ $(document).ready(function() {
 
     // LIGHTBOX FUNCTION //
     $(function() {
-        $(".lightbox").delay(500).fadeIn(1000);
+        $(".lightbox").delay(500).fadeIn(2000);
 
         // LIGHTBOX - SUBMIT BUTTON ON CLICK EVENT 
         $(".submitButton").on("click", function(event) {
@@ -23,6 +23,8 @@ $(document).ready(function() {
             // SUBMIT BUTTON IS CLICKED LIGHTBOX WILL HIDE 
             $(".lightbox").hide();
             // alert("you clicked me");
+            $(".display-3").hide(3000);
+            $(".paragraph").hide(2500);
 
             // GRABBING USERS INPUT IN FORM
             var submitName = $(".name").val().trim();
@@ -33,6 +35,13 @@ $(document).ready(function() {
                 submitName: submitName,
                 submitEmail: submitEmail
             });
+        });
+
+    });
+    // SEARCH FORM BUTTON - MAGNIFYING GLASS 
+    $(function() {
+        $(".searchImage").on("click", function(event) {
+            
         });
     });
 });
