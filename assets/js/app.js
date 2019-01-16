@@ -1,11 +1,12 @@
 $(document).ready(function () {
   $(document).on("click", "#search", search);
 });
+var map;
 
 function buildVideoSearchUrl(lat, long, keywords, radius) {
 
   var apiKey = "AIzaSyCdwC23T8LG-ANlisnBqfODfqoauzfNJO8";
-  var queryURL = "https://www.googleapis.com/youtube/v3/search/?part=snippet&type=video&key=" + apiKey +
+  var queryURL = "https://www.googleapis.com/youtube/v3/search/?part=snippet&type=video&maxResults=10&key=" + apiKey +
     "&location=" + lat + "%2C" + long +
     "&locationRadius=" + radius +
     "&q=" + keywords;
@@ -17,7 +18,7 @@ function buildVideoSearchUrl(lat, long, keywords, radius) {
 function buildVideoLocationSearchUrl(id) {
 
   var apiKey = "AIzaSyCdwC23T8LG-ANlisnBqfODfqoauzfNJO8";
-  var queryURL = "https://www.googleapis.com/youtube/v3/videos?part=recordingDetails" +
+  var queryURL = "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CrecordingDetails" +
     "&id=" + id +
     "&key=" + apiKey;
 
@@ -52,6 +53,7 @@ function search() {
         console.log(response);
         lat = geoResults[0].geometry.location.lat.toString();
         long = geoResults[0].geometry.location.lng.toString();
+        initMap(lat, long);
 
         $.ajax({
           url: buildVideoSearchUrl(lat, long, keywords, radius),
@@ -64,32 +66,24 @@ function search() {
             console.log(searchResults);
 
             for (var i = 0; i < searchResults.length; i++) {
-              var videoId = searchResults[i].id.videoId;
-              var videoTitle = searchResults[i].snippet.title;
-              var obj = {
-                id: videoId,
-                title: videoTitle
-              };
-
-              videos.push(obj);
+              videos.push(searchResults[i].id.videoId);
             }
 
             for (var i = 0; i < videos.length; i++) {
               //Get video location details
               $.ajax({
-                url: buildVideoLocationSearchUrl(videos[i].id),
+                url: buildVideoLocationSearchUrl(videos[i]),
                 method: "GET"
               })
                 .then(function (response) {
-                  var recordingDetails = response.items;
-                  var coordinates = {
-                    lat: recordingDetails[0].recordingDetails.location.latitude,
-                    long: recordingDetails[0].recordingDetails.location.longitude
-                  };
-                  videoCoordinates.push(coordinates);
+                  var details = response.items;
+                  var videoLat = details[0].recordingDetails.location.latitude;
+                  var videoLong = details[0].recordingDetails.location.longitude;
+                  var videoId = details[0].id;
+                  var videoTitle = details[0].snippet.title;
                   console.log(location);
         
-                  
+                  addMarker(videoLat, videoLong, videoTitle, videoId);
                 });
             }
             
@@ -102,13 +96,17 @@ function search() {
 }
 
 //create map
-function initMap(centerLat, centerLong, videoLat, videoLong, videoTitle, id) {
+function initMap(centerLat, centerLong) {
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
+    zoom: 7,
     center: new google.maps.LatLng(centerLat, centerLong),
     mapTypeId: 'terrain'
   });
 
+  
+}
+
+function addMarker(videoLat, videoLong, videoTitle, id){
   var latLng = new google.maps.LatLng(videoLat, videoLong);
   var marker = new google.maps.Marker({
     position: latLng,
