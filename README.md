@@ -18,7 +18,7 @@ Once video is done it will take you back to the map to choose another video.
 
 
 TECH USED:
-- HTML
+- HTML5
 - CSS
 - BOOTSTRAP
 - MATERIALIZE
@@ -27,3 +27,4 @@ TECH USED:
 - PHOTOSHOP
 - FIREBASE
 - API (GOOGLE MAPS / YOUTUBE)
+- Javascript
