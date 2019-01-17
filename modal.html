@@ -18,15 +18,16 @@
 
 <body>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Food / Drink</button>
+  <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">Food / Drink</button>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <div id="map"></div>
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div id="mapCanvas"></div>
+      </div>
     </div>
   </div>
-</div>
   <!-- End Copy for Transfer -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
@@ -34,14 +35,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 
-  <!--======= GOOGLE API CALL =======-->
-  <!-- Copy for Transfer to html page -->
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG_e26J2reLpshZj7mnvMe3j9rw9qwMqo&libraries=places&callback=initMap">
+  <!-- Copy for Transfer to html page -->
+  <script>
+    function initMap() {}
   </script>
 
-<!--======= JQUERY FILE =======-->
-<script type="text/javascript" src="modal.js"></script>
+  <!--======= GOOGLE API CALL =======-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG_e26J2reLpshZj7mnvMe3j9rw9qwMqo&callback=initMap&libraries=places"
+  async defer></script>
+
+  <!--======= JQUERY FILE =======-->
+  <script type="text/javascript" src="modal.js"></script>
 
 </body>
 
