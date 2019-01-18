@@ -1,10 +1,9 @@
 html, body {
     height: 95%;
 }
-/* url("../images/jupiter.jpg") center center no-repeat */
-
 #cover {
-    background: #222 url("./images/background.jpg");
+    background: #222;
+    /* background: url('images/background.jpg') center center no-repeat; */
     background-size: cover;
     color: white;
     height: 100%;
@@ -31,6 +30,9 @@ html, body {
 }
 #cover-caption {
     width: 100%;
+}
+.form-inline {
+    margin-right: 10px;
 }
 /* FOOTER */
 #footer-main {
@@ -77,16 +79,16 @@ input[type="name"], input[type="email"], input[type="submit"] {
     border-radius: 4px;
     box-shadow: inset 0 0 3px 3px #fafafa;
 }
-.ketchupSticker {
-    height: 400px;
-    /* padding-bottom: 50px; */
-}
+/* .ketchupSticker {
+    height: 500px;
+    padding-bottom: 50px;
+} */
 /* NAVBAR - ACTIVE - WHO WE ARE - CONTACT US */
 li[class="nav-item"], li[class="nav-item active"] {
     font-size: 12px;
 }
-/* STUDENT CARD CONTAINER */
 
+/* STUDENT CARD CONTAINER */
 /* ======= CARDS ======= */
 
 /* CARDS */
@@ -109,8 +111,8 @@ li[class="nav-item"], li[class="nav-item active"] {
 .card-text {
     padding-top: 10px;
 }
-/* ===== WHO WE ARE - SECTION ===== */
 
+/* ===== WHO WE ARE - SECTION ===== */
 /* WHO WE ARE - PARAGRAPH */
 h4 {
     text-align: center;
@@ -122,8 +124,53 @@ h4 {
     font-size: 18px;
     font-weight: 300;
 }
-/* ===== FOOTER =====  */
+/* ===== FOOTER ===== */
 h6 {
     text-decoration: underline;
     text-align: left;
+}
+/* ====== GOOGLE DIV - POPULATED BY GOOGLE API ====== */
+#emptyGoogleDiv {
+    height: 40%;
+    width: 70%;
+}
+
+/*  ====== CONTACT US FORM ======  */
+.modal-title {
+    width: 100%;
+
+}
+.contactUsForm {
+    align-content: center;
+}
+.contactUsLightBox {
+    /* width: 80%; */
+    /* height: auto; */
+    /* display: none; */
+    visibility: inherit;
+    position: absolute;
+    top: 150px;
+    left: 325px;
+    display: none;
+    width: 60%;
+    height: 80%;
+    padding: 80px;
+    color: #000000;
+    background-color: #F79090;
+    /* text-align: center; */
+    text-shadow: #333 0 1px 0;
+    opacity: .9;
+    border-radius: 6%;
+}
+/* input[type="email"], input["email"], textarea["form-control"] {
+    width: 60%;
+} */
+.contactName, .contactEmail, .contactMessage {
+    width: 90%;
+    align-content: center;
+    margin: auto;
+}
+form {
+    /* align-content: center; */
+    margin: auto;
 }

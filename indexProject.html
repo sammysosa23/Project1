@@ -13,12 +13,6 @@
     <link src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></link>
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
 
-    <!-- MATERIALIZED - CSS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
-
-    <!-- MATERIALIZE - JAVASCRIPT -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
-
     <!--======= CSS  =======-->
     <link rel="stylesheet" type="text/css" href="css/styleProject.css">
 
@@ -31,33 +25,11 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">HOME PAGE<span class="sr-only">(current)</span></a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#">TRENDING</a>
-                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="#whoWeAre">WHO ARE WE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">CONTACT US</a>
-                    <!-- <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    </div>
-                                    <div class="modal-body">
-                                    ...
-                                    </div>
-                                    <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                    </div> -->
+                    <a class="contactForm nav-link" href="contactUsForm">CONTACT US</a>
                 </li>
             </ul>
                 <form class="form-inline">
@@ -77,15 +49,7 @@
                         <div id="emptyGoogleDiv"></div> <!--======= EMPTY DIV TO BE POPULATED BY THE GOOGLE API =======-->
 
                         <div id="contentContainer"></div> <!--======= EMPTY DIV TO BE POPULATED BY THE YOUTUBE VIDEO =======-->
-                        <!--======= SUBJECT BUTTONS =======-->                        
-                        <!-- <div id="trendingButtons"> -->
-                            <!-- <div class="container mr-3"> -->
-                                <!-- <button type="button" class="btn btn-outline-primary btn-lg">TRENDING</button> -->
-                                <!-- <button type="button" class="btn btn-outline-primary btn-lg">FAIL</button> -->
-                                <!-- <button type="button" class="btn btn-outline-primary btn-lg">FUNNY</button> -->
-                            <!-- </div> -->
-                            <!-- <br> -->
-                        <!-- </div> -->
+
                     </div>
                 </div>
             </div>
@@ -96,7 +60,7 @@
         <div id="cover-caption">
             <div class="container">
                 <div class="col-sm-10 offset-sm-1">
-                    <h4 class="display-3"><strong>WHO WE ARE</strong><br>We are four students attending the Georgia Tech Coding BootCamp</h4>
+                    <h4 class="display-4"><strong>WHO WE ARE</strong><br>We are four students attending the Georgia Tech Coding BootCamp</h4>
                     <p class="paragraphOne">This is our first project</p>
 
                     <div class="studentCard text-muted">
@@ -111,7 +75,7 @@
                                     <a href="https://github.com/skendall74" target="_blank">Portfolio</a>
                                 </div>
                                 <div class="card">
-                                    <img src="assets/images/Patel.png" alt="Dhruv Patel">
+                                    <img src="assets/images/DPLinkedinProPic.png" alt="Dhruv Patel">
                                     <p class="card-text">
 
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis nibh in augue porttitor, vel bibendum mi tristique. Nam cursus tortor sodales, porta neque et, fermentum quam.</p>
@@ -148,9 +112,33 @@
                 <input type="name" class="name" placeholder="Name">
                 <input type="email" class="email" placeholder="Email"><br>
                 <input type="submit" value="Submit" class="submitButton"><br>
-                <!-- <img class="ketchupSticker" src="assets/images/giphy.gif" alt="ketchup sticker">  -->
             </form>
         </div>
+
+    <!-- ======= CONTACT US FORM ======= -->
+    <div class="contactUsLightBox">
+        <div class="contactUsForm">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Contact Us:</h5>
+            </div>    
+                <form>
+                <div class="form-group contactName">
+                    <label for="exampleFormControlInput1">Name:</label>
+                    <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="name">
+                </div>
+                <div class="form-group contactEmail">
+                        <label for="exampleFormControlInput1">Email:</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="john.doe@yahoo.com">
+                    </div>
+                <div class="form-group contactMessage">
+                    <label for="exampleFormControlTextarea1">Message:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                </div>
+                <input type="submit" value="Submit" class="contactUsSubmitButton"><br>
+            </form>
+        </div>
+    </div>
+
     <!--======= FOOTER ========-->
     <footer id="footer-main">
         <div class="container">
