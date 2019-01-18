@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>*Project One*</title>
-    <link rel="shortcut icon" type="image/png" href="assets/images/ketchup2.png"/>
+    <link rel="shortcut icon" type="image/png" href="assets/images/ketchup2.png" />
 
     <!--======== BOOTSTRAP CSS =======-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
     <!--======= FIREBASE =======-->
-    <link src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></link>
+    <link src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js">
+    </link>
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
 
     <!-- MATERIALIZED - CSS -->
@@ -24,23 +26,24 @@
     <link rel="stylesheet" type="text/css" href="assets/css/styleProject.css">
 
 </head>
+
 <body>
     <!--======= NAVIGATION BAR =======-->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark navbar-full" id="nav-main">
         <a class="navbar-brand" href=""><img class="logoImage" src="assets/images/ketchup2.png" alt="ketchup splatter"></a>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">HOME PAGE<span class="sr-only">(current)</span></a>
-                </li>
-                <!-- <li class="nav-item">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">HOME PAGE<span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item">
                     <a class="nav-link" href="#">TRENDING</a>
                 </li> -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#whoWeAre">WHO ARE WE</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">CONTACT US</a>
-                    <!-- <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <li class="nav-item">
+                <a class="nav-link" href="#whoWeAre">WHO ARE WE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">CONTACT US</a>
+                <!-- <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -59,37 +62,41 @@
                                 </div>
                             </div>
                     </div> -->
-                </li>
-            </ul>
-                <form class="form-inline">
-                    <input class="form-control mr-1" type="search" placeholder="Search for videos" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit"><img class="searchImage" src="assets/images/searchIcon.png" alt="search icon"></button>
-                </form>
+            </li>
+        </ul>
+        <form class="form-inline">
+            <input id="keywords" class="form-control mr-1" type="search" placeholder="Search for videos" aria-label="Search">
+            <button id="search" class="btn btn-outline-dark" type="submit"><img class="searchImage" src="assets/images/searchIcon.png"
+                    alt="search icon"></button>
+        </form>
     </nav>
-    
+
     <!--======= BODY CONTAINER =======-->
     <section id="cover">
-            <div id="cover-caption">
-                <div class="container">
-                    <div class="col-sm-10 offset-sm-1">
-                        <h1 class="display-3">Welcome to Ketchup</h1>
-                        <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <div id="cover-caption">
+            <div class="container">
+                <div class="col-sm-10 offset-sm-1">
+                    <h1 class="display-3">Welcome to Ketchup</h1>
+                    <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
 
-                        <div id="emptyGoogleDiv"></div> <!--======= EMPTY DIV TO BE POPULATED BY THE GOOGLE API =======-->
 
-                        <div id="contentContainer"></div> <!--======= EMPTY DIV TO BE POPULATED BY THE YOUTUBE VIDEO =======-->
-                        <!--======= SUBJECT BUTTONS =======-->                        
-                        <!-- <div id="trendingButtons"> -->
-                            <!-- <div class="container mr-3"> -->
-                                <!-- <button type="button" class="btn btn-outline-primary btn-lg">TRENDING</button> -->
-                                <!-- <button type="button" class="btn btn-outline-primary btn-lg">FAIL</button> -->
-                                <!-- <button type="button" class="btn btn-outline-primary btn-lg">FUNNY</button> -->
-                            <!-- </div> -->
-                            <!-- <br> -->
-                        <!-- </div> -->
-                    </div>
+                    <!--======= EMPTY DIV TO BE POPULATED BY THE GOOGLE API =======-->
+                    <div id="map"></div>
+
+                    <div id="contentContainer"></div>
+                    <!--======= EMPTY DIV TO BE POPULATED BY THE YOUTUBE VIDEO =======-->
+                    <!--======= SUBJECT BUTTONS =======-->
+                    <!-- <div id="trendingButtons"> -->
+                    <!-- <div class="container mr-3"> -->
+                    <!-- <button type="button" class="btn btn-outline-primary btn-lg">TRENDING</button> -->
+                    <!-- <button type="button" class="btn btn-outline-primary btn-lg">FAIL</button> -->
+                    <!-- <button type="button" class="btn btn-outline-primary btn-lg">FUNNY</button> -->
+                    <!-- </div> -->
+                    <!-- <br> -->
+                    <!-- </div> -->
                 </div>
             </div>
+        </div>
     </section>
 
     <!--======= WHO WE ARE CONTAINER =======-->
@@ -97,43 +104,52 @@
         <div id="cover-caption">
             <div class="container">
                 <div class="col-sm-10 offset-sm-1">
-                    <h4 class="display-3"><strong>WHO WE ARE</strong><br>We are four students attending the Georgia Tech Coding BootCamp</h4>
+                    <h4 class="display-3"><strong>WHO WE ARE</strong><br>We are four students attending the Georgia
+                        Tech Coding BootCamp</h4>
                     <p class="paragraphOne">This is our first project</p>
 
                     <div class="studentCard text-muted">
                         <div class="container">
-                
+
                             <div class="row">
                                 <div class="card">
                                     <img src="assets/images/Mark.png" alt="Mark Hoefer">
                                     <p class="card-text">
 
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis nibh in augue porttitor, vel bibendum mi tristique. Nam cursus tortor sodales, porta neque et, fermentum quam.</p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis nibh in
+                                        augue porttitor, vel bibendum mi tristique. Nam cursus tortor sodales, porta
+                                        neque et, fermentum quam.</p>
                                     <a href="https://github.com/skendall74" target="_blank">Portfolio</a>
                                 </div>
                                 <div class="card">
                                     <img src="assets/images/Patel.png" alt="Dhruv Patel">
                                     <p class="card-text">
 
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis nibh in augue porttitor, vel bibendum mi tristique. Nam cursus tortor sodales, porta neque et, fermentum quam.</p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis nibh in
+                                        augue porttitor, vel bibendum mi tristique. Nam cursus tortor sodales, porta
+                                        neque et, fermentum quam.</p>
                                     <a href="https://github.com/darup67" target="_blank">Portfolio</a>
                                 </div>
                                 <div class="card">
                                     <img src="assets/images/Shannon.jpeg" alt="Shannon Kendall">
                                     <p class="card-text">
 
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis nibh in augue porttitor, vel bibendum mi tristique. Nam cursus tortor sodales, porta neque et, fermentum quam.</p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis nibh in
+                                        augue porttitor, vel bibendum mi tristique. Nam cursus tortor sodales, porta
+                                        neque et, fermentum quam.</p>
                                     <a href="https://github.com/skendall74" target="_blank">Portfolio</a>
                                 </div>
                                 <div class="card">
                                     <img src="assets/images/sam.jpg" alt="Sam Terrazas">
                                     <p class="card-text">
 
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis nibh in augue porttitor, vel bibendum mi tristique. Nam cursus tortor sodales, porta neque et, fermentum quam.</p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis nibh in
+                                        augue porttitor, vel bibendum mi tristique. Nam cursus tortor sodales, porta
+                                        neque et, fermentum quam.</p>
                                     <a href="https://github.com/sammysosa23" target="_blank">Portfolio</a>
                                 </div>
                             </div>
-                
+
                         </div>
                     </div>
                 </div>
@@ -143,15 +159,16 @@
 
     <!--======= LIGHTBOX CONTAINING NAME - EMAIL FORM =======-->
     <div class="lightbox">
-            <h2>Sign up</h2>
-            <p>Enter your name and email for our newsletter with additional information on trending YouTube videos in your local area.</p>
-            <form action=""">
-                <input type="name" class="name" placeholder="Name">
-                <input type="email" class="email" placeholder="Email"><br>
-                <input type="submit" value="Submit" class="submitButton"><br>
-                <!-- <img class="ketchupSticker" src="assets/images/giphy.gif" alt="ketchup sticker">  -->
-            </form>
-        </div>
+        <h2>Sign up</h2>
+        <p>Enter your name and email for our newsletter with additional information on trending YouTube videos in your
+            local area.</p>
+        <form action=""">
+                <input type=" name" class="name" placeholder="Name">
+            <input type="email" class="email" placeholder="Email"><br>
+            <input type="submit" value="Submit" class="submitButton"><br>
+            <!-- <img class="ketchupSticker" src="assets/images/giphy.gif" alt="ketchup sticker">  -->
+        </form>
+    </div>
     <!--======= FOOTER ========-->
     <footer id="footer-main">
         <div class="container">
@@ -178,9 +195,9 @@
                 </div>
                 <div class="col-sm-3">
                     <h6>Mission Statement:</h6>
-                    <p>Is to make sure leadership believes we are valuable, 
-                    indispensable, unable to be outsourced, and critical to the survival of the organization.  
-                    We are none of these things, but we are relying on leadership incompetence to fill that void.</p>
+                    <p>Is to make sure leadership believes we are valuable,
+                        indispensable, unable to be outsourced, and critical to the survival of the organization.
+                        We are none of these things, but we are relying on leadership incompetence to fill that void.</p>
                 </div>
             </div>
         </div>
@@ -191,7 +208,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG_e26J2reLpshZj7mnvMe3j9rw9qwMqo&callback=initMap">
+    </script>
     <!--======= JQUERY FILE =======-->
     <script type="text/javascript" src="assets/js/appProject.js"></script>
 </body>
+
 </html>
