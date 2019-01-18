@@ -1,9 +1,8 @@
 html, body {
-    height: 95%;
+    height: 100%;
 }
 #cover {
     background: #222;
-    /* background: url('images/background.jpg') center center no-repeat; */
     background-size: cover;
     color: white;
     height: 100%;
@@ -17,16 +16,6 @@ html, body {
     width: 80%;
     align-items: center;
 
-}
-#trendingButtons.absolute {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 100%;
-}
-#submitButtonForm {
-    text-align: center;
-    align-items: center;
 }
 #cover-caption {
     width: 100%;
@@ -59,7 +48,7 @@ h1, h6 {
 .lightbox {
     position: absolute;
     top: 150px;
-    left: 400px;
+    left: 300px;
     display: none;
     width: 50%;
     height: 60%;
@@ -79,10 +68,6 @@ input[type="name"], input[type="email"], input[type="submit"] {
     border-radius: 4px;
     box-shadow: inset 0 0 3px 3px #fafafa;
 }
-/* .ketchupSticker {
-    height: 500px;
-    padding-bottom: 50px;
-} */
 /* NAVBAR - ACTIVE - WHO WE ARE - CONTACT US */
 li[class="nav-item"], li[class="nav-item active"] {
     font-size: 12px;
@@ -144,9 +129,6 @@ h6 {
     align-content: center;
 }
 .contactUsLightBox {
-    /* width: 80%; */
-    /* height: auto; */
-    /* display: none; */
     visibility: inherit;
     position: absolute;
     top: 150px;
@@ -157,14 +139,10 @@ h6 {
     padding: 80px;
     color: #000000;
     background-color: #F79090;
-    /* text-align: center; */
     text-shadow: #333 0 1px 0;
     opacity: .9;
     border-radius: 6%;
 }
-/* input[type="email"], input["email"], textarea["form-control"] {
-    width: 60%;
-} */
 .contactName, .contactEmail, .contactMessage {
     width: 90%;
     align-content: center;
