@@ -30,8 +30,3 @@ function getVids(pid) {
         }
     );
 }
-
-
-<!--In your HTML -->
-<
-ul id = "results" > < /ul>
