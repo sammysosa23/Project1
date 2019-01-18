@@ -1,0 +1,4 @@
+{
+    "javascript.implicitProjectConfig.checkJs": true,
+    "trailing-spaces.trimOnSave": true
+}
