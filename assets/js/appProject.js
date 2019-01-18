@@ -5,6 +5,7 @@ var map;
 
 $(document).ready(function () {
 
+    $("#map").hide();
     // INITIALIZE FIREBASE
     var config = {
         apiKey: "AIzaSyCtHL7f2YUS9l46Rdo3ilu9v8VJLbMOMPo",
@@ -56,7 +57,6 @@ $(document).ready(function () {
             // alert("you clicked me");
             $(".display-3").hide(3000);
             $(".paragraph").hide(2500);
-            // /$("#map").show();
 
             // GRABBING USERS INPUT IN FORM
             var submitName = $(".name").val().trim();
@@ -135,7 +135,7 @@ function search() {
 
                 addressLat = geoResults[0].geometry.location.lat.toString();
                 addressLong = geoResults[0].geometry.location.lng.toString();
-                map = initMap(addressLat, addressLong);
+                initMap(addressLat, addressLong);
 
                 //search for videos in the area of the given address
                 $.ajax({
@@ -162,6 +162,8 @@ function search() {
                                     var videoTitle = details[0].snippet.title;
 
                                     addMarker(videoLat, videoLong, videoTitle, videoId);
+
+                                    $("#map").show();
                                 });
                         }
 
