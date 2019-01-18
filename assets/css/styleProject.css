@@ -1,8 +1,21 @@
 html, body {
+<<<<<<< HEAD
+    height: 95%;
+    width: 100%;
+}
+
+#map {
+    height: 400px;
+}
+
+#cover {
+    background: #222 url("./../images/background.jpg");
+=======
     height: 100%;
 }
 #cover {
     background: #222;
+>>>>>>> master
     background-size: cover;
     color: white;
     height: 100%;
@@ -33,7 +46,7 @@ html, body {
 h1, h6 {
     align-content: center;
     text-align: center;
-} 
+}
 /* LOGO IMAGE */
 .logoImage {
     width: 70px;
@@ -41,8 +54,8 @@ h1, h6 {
 }
 /* SEARCH IMAGE */
 .searchImage {
-    width: 20px;    
-    height: 20px;      
+    width: 20px;
+    height: 20px;
 }
 /* LIGHTBOX - SIGN UP */
 .lightbox {
@@ -149,6 +162,5 @@ h6 {
     margin: auto;
 }
 form {
-    /* align-content: center; */
     margin: auto;
 }
