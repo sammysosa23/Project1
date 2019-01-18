@@ -1,8 +1,8 @@
 html, body {
-    height: 95%;
+    height: 100%;
 }
 #cover {
-    background: #222 url("../images/jupiter.jpg") center center no-repeat;
+    background: #222;
     background-size: cover;
     color: white;
     height: 100%;
@@ -17,22 +17,138 @@ html, body {
     align-items: center;
 
 }
-#trendingButtons.absolute {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 100%;
-}
-#submitButtonForm {
-    text-align: center;
-    align-items: center;
-}
 #cover-caption {
     width: 100%;
+}
+.form-inline {
+    margin-right: 10px;
+}
+/* FOOTER */
+#footer-main {
+    background: #222;
+    color: white;
+    font-size: 0.8rem;
+    padding: 2.5rem 0;
 }
 h1, h6 {
     align-content: center;
     text-align: center;
 } 
+/* LOGO IMAGE */
+.logoImage {
+    width: 70px;
+    height: 70px;
+}
+/* SEARCH IMAGE */
+.searchImage {
+    width: 20px;    
+    height: 20px;      
+}
+/* LIGHTBOX - SIGN UP */
+.lightbox {
+    position: absolute;
+    top: 150px;
+    left: 325px;
+    display: none;
+    width: 50%;
+    height: 60%;
+    padding: 100px;
+    color: #000000;
+    background-color: #F79090;
+    text-align: center;
+    text-shadow: #333 0 1px 0;
+    opacity: .9;
+    border-radius: 6%;
+}
+/* LIGHTBOX - NAME INPUT */
+input[type="name"], input[type="email"], input[type="submit"] {
+    margin: 8px;
+    padding: 6px 12px;
+    outline: none;
+    border-radius: 4px;
+    box-shadow: inset 0 0 3px 3px #fafafa;
+}
+/* NAVBAR - ACTIVE - WHO WE ARE - CONTACT US */
+li[class="nav-item"], li[class="nav-item active"] {
+    font-size: 12px;
+}
 
-/* NEED TO ADD LIGHT BOX FOR NAME/EMAIL/SUBMIT */
+/* STUDENT CARD CONTAINER */
+/* ======= CARDS ======= */
+
+/* CARDS */
+.card {
+    float: left;
+    width: 50%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+}
+/* CARD - IMAGES */
+.card > img {
+    max-width: 200px;
+    max-height: 150px;
+    align-self: center;
+}
+/* CARD - PARAGRAPH - LINK */
+.card > p, .card > a {
+    text-align: center;
+}
+.card-text {
+    padding-top: 10px;
+}
+
+/* ===== WHO WE ARE - SECTION ===== */
+/* WHO WE ARE - PARAGRAPH */
+h4 {
+    text-align: center;
+    font-size: 2rem !important;
+    padding-top: 40px;
+}
+.paragraphOne {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+}
+/* ===== FOOTER ===== */
+h6 {
+    text-decoration: underline;
+    text-align: left;
+}
+/* ====== GOOGLE DIV - POPULATED BY GOOGLE API ====== */
+#emptyGoogleDiv {
+    height: 40%;
+    width: 70%;
+}
+
+/*  ====== CONTACT US FORM ======  */
+.modal-title {
+    width: 100%;
+
+}
+.contactUsForm {
+    align-content: center;
+}
+.contactUsLightBox {
+    visibility: inherit;
+    position: absolute;
+    top: 150px;
+    left: 325px;
+    display: none;
+    width: 60%;
+    height: 80%;
+    padding: 80px;
+    color: #000000;
+    background-color: #F79090;
+    text-shadow: #333 0 1px 0;
+    opacity: .9;
+    border-radius: 6%;
+}
+.contactName, .contactEmail, .contactMessage {
+    width: 90%;
+    align-content: center;
+    margin: auto;
+}
+form {
+    /* align-content: center; */
+    margin: auto;
+}
