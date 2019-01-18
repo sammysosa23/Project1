@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // INITIALIZE FIREBASE
+    // INITIALIZE FIREBASE - USER NAME - EMAIL
     var config = {
         apiKey: "AIzaSyCtHL7f2YUS9l46Rdo3ilu9v8VJLbMOMPo",
         authDomain: "projectonelightbox.firebaseapp.com",
@@ -23,8 +23,10 @@ $(document).ready(function() {
             // SUBMIT BUTTON IS CLICKED LIGHTBOX WILL HIDE 
             $(".lightbox").hide();
             // alert("you clicked me");
-            $(".display-3").hide(3000);
-            $(".paragraph").hide(2500);
+            $(".display-3").fadeOut(2500);
+            $(".paragraph").fadeOut(2500);
+
+            // if ( !name || !email ) return; THIS WILL JUST LET THE USER ACCESS THE PAGE WITHOUT INPUTING THE REQUIRED INFO  
 
             // GRABBING USERS INPUT IN FORM
             var submitName = $(".name").val().trim();
@@ -38,6 +40,31 @@ $(document).ready(function() {
         });
 
     });
+    // CONTACT US FORM FUNCTION //
+    $(function() {
+        // ON CLICK FUNCTION WILL TRIGGER FORM //
+        $(".contactForm").on("click", function(event) {
+            event.preventDefault();
+            // CONTACT BUTTON IS CLICKED - LIGHTBOX WILL DISPLAY
+            $(".contactUsLightBox").show();
+
+                $(".contactUsSubmitButton").on("click", function(event) {
+                    $(".contactForm").unbind("submit").hide();
+            })
+            
+            // GRABBING USERS INPUT IN CONTACT US FORM
+            var contactUsName = $(".name").val().trim();
+            var contactUsEmail = $(".email").val().trim();
+            var contactUsMessage = $(".message").val().trim();
+
+            databasebase.ref().push( {
+                contactUsName: contactUsName,
+                contactUsEmail: contactUsEmail,
+                contactUsMessage: contactUsMessage
+            }); 
+        });
+    });
+    
     // SEARCH FORM BUTTON - MAGNIFYING GLASS 
     $(function() {
         $(".searchImage").on("click", function(event) {
