@@ -4,11 +4,11 @@ html, body {
 }
 
 #map {
-    height: 80%;
+    height: 400px;
 }
 
 #cover {
-    background: #222 url("./images/background.jpg");
+    background: #222 url("./../images/background.jpg");
     background-size: cover;
     color: white;
     height: 100%;

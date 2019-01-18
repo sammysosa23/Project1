@@ -56,7 +56,7 @@ $(document).ready(function () {
             // alert("you clicked me");
             $(".display-3").hide(3000);
             $(".paragraph").hide(2500);
-            $("#map").show();
+            // /$("#map").show();
 
             // GRABBING USERS INPUT IN FORM
             var submitName = $(".name").val().trim();
