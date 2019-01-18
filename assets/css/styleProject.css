@@ -1,7 +1,11 @@
 html, body {
     height: 95%;
+    width: 100%;
 }
-/* url("../images/jupiter.jpg") center center no-repeat */
+
+#map {
+    height: 80%;
+}
 
 #cover {
     background: #222 url("./images/background.jpg");
