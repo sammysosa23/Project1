@@ -1,4 +1,5 @@
 html, body {
+<<<<<<< HEAD
     height: 95%;
     width: 100%;
 }
@@ -9,6 +10,12 @@ html, body {
 
 #cover {
     background: #222 url("./../images/background.jpg");
+=======
+    height: 100%;
+}
+#cover {
+    background: #222;
+>>>>>>> master
     background-size: cover;
     color: white;
     height: 100%;
