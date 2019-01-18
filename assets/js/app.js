@@ -38,8 +38,10 @@ function search() {
   var long;
   // This line will grab the text from the input box
   var keywords = $("#keywords").val().trim();
-  var address = $("#address").val().trim();
-  var radius = $("#radius").val().trim();
+  // var address = $("#address").val().trim();
+  // var radius = $("#radius").val().trim();
+  var address = "atlanta";
+  var radius = "15mi";
 
   var geocodeUrl = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + address + '&key=AIzaSyDgDiGe1sPYYqpbGQCbUR5W9gUVrv7L1Qk';
   $.ajax({
@@ -98,7 +100,7 @@ function search() {
 //create map
 function initMap(centerLat, centerLong) {
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 7,
+    zoom: 8,
     center: new google.maps.LatLng(centerLat, centerLong),
     mapTypeId: 'terrain'
   });
