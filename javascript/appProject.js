@@ -41,29 +41,30 @@ $(document).ready(function() {
 
     });
     // CONTACT US FORM FUNCTION //
-    $(function() {
+    // $(function() {
         // ON CLICK FUNCTION WILL TRIGGER FORM //
-        $(".contactForm").on("click", function(event) {
-            event.preventDefault();
-            // CONTACT BUTTON IS CLICKED - LIGHTBOX WILL DISPLAY
-            $(".contactUsLightBox").show();
+    //     $(".contactUsLightBox").on("click", function(event) {
+    //         event.preventDefault();
+    //         alert("clicked");
+    //         CONTACT BUTTON IS CLICKED - LIGHTBOX WILL DISPLAY
+    //         $(".contactUsLightBox").show();
 
-                $(".contactUsSubmitButton").on("click", function(event) {
-                    $(".contactForm").unbind("submit").hide();
-            })
+    //             $(".contactUsSubmitButton").on("click", function(event) {
+    //                 $(".contactForm").unbind("submit").hide();
+    //         })
             
-            // GRABBING USERS INPUT IN CONTACT US FORM
-            var contactUsName = $(".name").val().trim();
-            var contactUsEmail = $(".email").val().trim();
-            var contactUsMessage = $(".message").val().trim();
+    //         // GRABBING USERS INPUT IN CONTACT US FORM
+    //         var contactUsName = $(".name").val().trim();
+    //         var contactUsEmail = $(".email").val().trim();
+    //         var contactUsMessage = $(".message").val().trim();
 
-            databasebase.ref().push( {
-                contactUsName: contactUsName,
-                contactUsEmail: contactUsEmail,
-                contactUsMessage: contactUsMessage
-            }); 
-        });
-    });
+    //         databasebase.ref().push( {
+    //             contactUsName: contactUsName,
+    //             contactUsEmail: contactUsEmail,
+    //             contactUsMessage: contactUsMessage
+    //         }); 
+    //     });
+    // });
     
     // SEARCH FORM BUTTON - MAGNIFYING GLASS 
     $(function() {
