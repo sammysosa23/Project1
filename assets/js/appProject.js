@@ -72,7 +72,6 @@ $(document).ready(function () {
     });
     // SEARCH FORM BUTTON - MAGNIFYING GLASS 
     $(document).on("click", "#search", search);
-
 });
 
 function getVideoSearchUrl(lat, long, keywords, radius) {

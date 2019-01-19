@@ -7,6 +7,7 @@
 #mapCanvas  {
     height: 500px;
 }
+
 html,
 body {
     height: 100%;
@@ -84,4 +85,15 @@ body {
 }
 #target {
   width: 345px;
+}
+
+.btn-primary {
+  background-color: #222;
+  border: Black;
+}
+
+.btn-primary:hover {
+  background-color: red;
+  border: red;
+  color: green;
 }
