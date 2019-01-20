@@ -19,6 +19,7 @@
 
     <!--======= CSS  =======-->
     <link rel="stylesheet" type="text/css" href="assets/css/styleProject.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/modal.css">
 
 </head>
 
@@ -37,6 +38,17 @@
                     <a class="contactForm nav-link" href="contactUsForm">CONTACT US</a>
                 </li>
             </ul>
+<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">Food &
+    Drink</button>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!--  <input id="pac-input" class="controls" type="text" placeholder="Search Box">-->
+            <div id="mapCanvas"></div>
+        </div>
+    </div>
+</div>
                 <form class="form-inline">
                     <input class="form-control mr-1" type="search" placeholder="Search for videos" aria-label="Search">
                     <button class="btn btn-outline-dark" type="submit"><img class="searchImage" src="assets/images/searchIcon.png" alt="search icon"></button>
@@ -103,7 +115,6 @@
                 <input type="submit" value="Submit" class="submitButton"><br>
             </form>
         </div>
-
     <!-- ======= CONTACT US FORM ======= -->
     <div class="contactUsLightBox">
         <div class="contactUsForm">
@@ -127,7 +138,6 @@
             </form>
         </div>
     </div>
-
     <!--======= FOOTER ========-->
     <footer id="footer-main">
         <div class="container">
@@ -146,10 +156,10 @@
                 </div>
                 <div class="col-sm-3">
                     <ul class="list-unstyled">
-                        <li><a href="http://google.com">facebook</a></li>
-                        <li><a href="http://google.com">twitter</a></li>
-                        <li><a href="http://google.com">youtube</a></li>
-                        <li><a href="http://google.com">linkedin</a></li>
+                        <li><a href="http://facebook.com">facebook</a></li>
+                        <li><a href="http://twitter.com">twitter</a></li>
+                        <li><a href="http://youtube.com">youtube</a></li>
+                        <li><a href="http://linkedin.com">linkedin</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
@@ -161,16 +171,15 @@
             </div>
         </div>
     </footer>
-
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG_e26J2reLpshZj7mnvMe3j9rw9qwMqo&callback=initMap">
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG_e26J2reLpshZj7mnvMe3j9rw9qwMqo&callback=initMap&libraries=places"
+  async defer></script>
     <!--======= JQUERY FILE =======-->
-    <script type="text/javascript" src="javascript/appProject.js"></script>
+    <script type="text/javascript" src="assets/js/appProject.js"></script>
+    <script type="text/javascript" src="assets/js/modal.js"></script>
 </body>
-
 </html>

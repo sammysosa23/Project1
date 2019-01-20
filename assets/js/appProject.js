@@ -1,7 +1,7 @@
 //retrieved from firebase (even though thats public too :/)
 var youtubeAPIKey;
 var geocodeAPIKey;
-var map;
+var map2;
 
 $(document).ready(function () {
 
@@ -55,8 +55,8 @@ $(document).ready(function () {
             // SUBMIT BUTTON IS CLICKED LIGHTBOX WILL HIDE 
             $(".lightbox").hide();
             // alert("you clicked me");
-            $(".display-3").hide(3000);
-            $(".paragraph").hide(2500);
+            $(".display-3").fadeOut(2500);
+            $(".paragraph").fadeOut(2500);
 
             // GRABBING USERS INPUT IN FORM
             var submitName = $(".name").val().trim();
@@ -72,7 +72,6 @@ $(document).ready(function () {
     });
     // SEARCH FORM BUTTON - MAGNIFYING GLASS 
     $(document).on("click", "#search", search);
-
 });
 
 function getVideoSearchUrl(lat, long, keywords, radius) {
@@ -135,7 +134,7 @@ function search() {
 
                 addressLat = geoResults[0].geometry.location.lat.toString();
                 addressLong = geoResults[0].geometry.location.lng.toString();
-                initMap(addressLat, addressLong);
+                initMaps(addressLat, addressLong);
 
                 //search for videos in the area of the given address
                 $.ajax({
@@ -173,8 +172,8 @@ function search() {
 }
 
 //create map
-function initMap(addressLat, addressLong) {
-    map = new google.maps.Map(document.getElementById('map'), {
+function initMaps(addressLat, addressLong) {
+    map2 = new google.maps.Map(document.getElementById('map'), {
         zoom: 8,
         center: new google.maps.LatLng(addressLat, addressLong),
         mapTypeId: 'terrain'
@@ -185,7 +184,7 @@ function addMarker(videoLat, videoLong, videoTitle, id) {
     var latLng = new google.maps.LatLng(videoLat, videoLong);
     var marker = new google.maps.Marker({
         position: latLng,
-        map: map,
+        map: map2,
         title: videoTitle,
         url: "https://youtu.be/" + id
     });
